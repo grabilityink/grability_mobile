@@ -1,37 +1,4 @@
-!(function () {
-    if (
-        ((Number.isInteger =
-            Number.isInteger ||
-            function (e) {
-                return "number" == typeof e && isFinite(e) && Math.floor(e) === e;
-            }),
-        "function" == typeof window.CustomEvent)
-    )
-        return !1;
-    function e(e, t) {
-        t = t || { bubbles: !1, cancelable: !1, detail: void 0 };
-        var s = document.createEvent("CustomEvent");
-        return s.initCustomEvent(e, t.bubbles, t.cancelable, t.detail), s;
-    }
-    var t, s, i;
-    (e.prototype = window.Event.prototype),
-        (window.CustomEvent = e),
-        Number.isNaN ||
-            (this,
-            (t = (function () {
-                try {
-                    var e = {},
-                        t = Object.defineProperty,
-                        s = t(e, e, e) && t;
-                } catch (e) {}
-                return s;
-            })()),
-            (s = this.isNaN),
-            (i = function (e) {
-                return "number" == typeof e && s(e);
-            }),
-            t ? t(Number, "isNaN", { value: i, configurable: !0, writable: !0 }) : (Number.isNaN = i));
-})(),
+
     (function (e, t) {
         "object" == typeof exports && "object" == typeof module ? (module.exports = t()) : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? (exports.AOS = t()) : (e.AOS = t());
     })(this, function () {
