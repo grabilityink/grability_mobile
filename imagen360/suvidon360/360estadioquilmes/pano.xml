@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama id="node1" apprev="17950" appversion="6.1.6">
+  <input overlap="1" levelingpitch="0" leveltilesize="510" levelbiashidpi="1.000" levelbias="0.400" height="7387" width="7387" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingroll="0">
+    <level predecode="0" preload="0" height="7387" width="7387"/>
+    <level predecode="0" preload="0" height="3693" width="3693"/>
+    <level predecode="0" preload="0" height="1846" width="1846"/>
+    <level predecode="0" preload="0" height="923" width="923"/>
+    <level predecode="1" preload="1" height="461" width="461"/>
+    <preview strip="1" color="0x808080"/>
+  </input>
+  <view fovmode="0" pannorth="0">
+    <start projection="4" pan="-11.9524" fov="35.6732" tilt="-9.21931"/>
+    <flyin projection="9" pan="0" fov="170" tilt="-90"/>
+    <min pan="0" fovpixel="2" tilt="-90"/>
+    <max fovstereographic="270" scaletofit="1" fovfisheye="360" pan="360" fov="120" tilt="90"/>
+  </view>
+  <userdata description="" latitude="-34.741389" info="" customnodeid="" title="DCIM/PANORAMA/100_0008/DJI" longitude="-58.253889" datetime="4/4/20 15:35" altitude="50.00" author="" heading="0" copyright="" comment="" tags="aereamuni" nodeid="node1" source=""/>
+  <hotspots height="20" width="180" wordwrap="1">
+    <label backgroundalpha="1" borderradius="1" backgroundcolor="0xffffff" enabled="1" background="1" borderalpha="1" height="20" textalpha="1" border="1" width="180" wordwrap="1" textcolor="0x000000" bordercolor="0x000000"/>
+    <polystyle backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" bordercolor="0x0000ff"/>
+  </hotspots>
+  <media/>
+  <transition enabled="1" zoomspeed="2" blendcolor="0x000000" zoomout="0" softedge="0" zoomoutpause="1" zoomfov="20" type="crossdissolve" blendtime="1" zoomin="0"/>
+  <flyintransition enabled="1" speed="2.00"/>
+  <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+  <control lockedmouse="0" simulatemass="1" contextprojections="0" lockedkeyboard="0" lockedwheel="0" speedwheel="1" sensitivity="8" rubberband="0" dblclickfullscreen="0" hideabout="0" contextfullscreen="1" invertcontrol="1" lockedkeyboardzoom="0" invertwheel="0"/>
+</panorama>

@@ -1,0 +1,124 @@
+
+h1 {
+  font-size: 50px;
+  font-family: "kilogram";
+  font-variation-settings: "MONO" 1, "CASL" 1, "wght" 500, "slnt" 0;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+}
+
+.char {
+  position: relative;
+  display: inline-block;
+}
+.char::after, .char::before {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.char::after {
+  background: linear-gradient(to right, #f43149, #f43149, #f43149, #f43149);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100vw;
+  background-position: calc(var(--char-index) * 5%);
+  -webkit-clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0% 50%, 100% 0%, 100% 100%, 0 100%);
+  mix-blend-mode: difference;
+}
+.char::before {
+  text-shadow: -1px -1px 0 #f43149, 1px -1px 0 #f43149, -1px 1px 0 #f43149, 1px 1px 0 #f43149, 1px 0px 0px #f43149, 0px 1px 0px #f43149, 2px 1px 0px #f43149, 1px 2px 0px #f43149, 3px 2px 0px #f43149, 2px 3px 0px #f43149, 4px 3px 0px #f43149, 3px 4px 0px #f43149, 10px 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.animation .splitting .char::before,
+.animation .splitting .char::after {
+  -webkit-animation-name: bounceLetters;
+          animation-name: bounceLetters;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+          animation-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  -webkit-animation-delay: calc(0.25s + var(--char-index) * 0.1s);
+          animation-delay: calc(0.25s + var(--char-index) * 0.1s);
+}
+
+@-webkit-keyframes bounceLetters {
+  0% {
+    transform: scale(1, 1) translateY(0);
+    background-position: calc(var(--char-index) * 5%);
+    font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0;
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-20px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+    background-position: calc(var(--char-index) * 20%);
+    font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" -7;
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+    background-position: calc(var(--char-index) * 5%);
+    font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0;
+  }
+}
+
+@keyframes bounceLetters {
+  0% {
+    transform: scale(1, 1) translateY(0);
+    background-position: calc(var(--char-index) * 5%);
+    font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0;
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-20px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+    background-position: calc(var(--char-index) * 20%);
+    font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" -7;
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+    background-position: calc(var(--char-index) * 5%);
+    font-variation-settings: "MONO" 1, "CASL" 1, "wght" 1000, "slnt" 0;
+  }
+}
+.controls {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  z-index: 100;
+  display: block;
+}
+
+@font-face {
+  font-family: "Recursive v1.39";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Recursive_VF_1.039.ttf");
+  font-weight: 300 1000;
+}
