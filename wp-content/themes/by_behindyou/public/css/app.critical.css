@@ -60,6 +60,13 @@ ul li {
     border: 0;
     outline: 0;
 }
+.notlow {
+   box-sizing: border-box !important;
+padding: 0 !important;
+border: 40px !important;
+border-radius: 40px !important;
+outline: 0 !important;
+}
 html {
     background-color: #fff;
 }
